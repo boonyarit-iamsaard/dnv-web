@@ -1,10 +1,13 @@
+import { MantineProvider } from '@mantine/core';
 import { type Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
 import { type AppType } from 'next/app';
 import Head from 'next/head';
 
 import { Layout } from '@/components/layout';
+import { theme } from '@/styles/theme';
 import { api } from '@/utils/api';
+import { emotionCache } from '@/utils/emotion-cache';
 
 import '@/styles/globals.css';
 
@@ -18,9 +21,16 @@ const MyApp: AppType<{ session: Session | null }> = ({
         <title>DNV</title>
       </Head>
       <SessionProvider session={session}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <MantineProvider
+          emotionCache={emotionCache}
+          theme={theme}
+          withGlobalStyles
+          withNormalizeCSS
+        >
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MantineProvider>
       </SessionProvider>
     </>
   );

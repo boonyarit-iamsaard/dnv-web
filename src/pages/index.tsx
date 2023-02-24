@@ -1,20 +1,39 @@
+import { createStyles, Divider, Stack, Text, Title } from '@mantine/core';
 import { type NextPage } from 'next';
 
+const heroSectionStyles = createStyles(theme => ({
+  section: {
+    display: 'grid',
+    placeItems: 'center',
+    height: '100vh',
+  },
+  container: {
+    maxWidth: theme.breakpoints.sm,
+    paddingInline: theme.spacing.md,
+    marginInline: 'auto',
+    textAlign: 'center',
+  },
+}));
+
 const Home: NextPage = () => {
+  const { classes } = heroSectionStyles();
+
   return (
-    <section className="grid h-screen place-items-center">
-      <div className="max-w-screen-sm space-y-4 text-center">
-        <p className="italic text-slate-500">Welcome to</p>
-        <h1 className="font-serif text-4xl uppercase text-slate-700">
+    <section className={classes.section}>
+      <Stack className={classes.container}>
+        <Text color="slate.5" fs="italic">
+          Welcome to
+        </Text>
+        <Title color="slate.7" tt="uppercase">
           Dragonfly Naturist Village
-        </h1>
-        <hr className="border-slate-200" />
+        </Title>
+        <Divider color="slate.2" />
         {/* TODO: Improve this text */}
-        <p className="italic text-slate-500">
+        <Text color="slate.5" fz="sm" fs="italic">
           &quot;We are a naturist community in the beautiful countryside of the
           Pattaya area of Thailand.&quot;
-        </p>
-      </div>
+        </Text>
+      </Stack>
     </section>
   );
 };

@@ -1,20 +1,48 @@
 import { type FC } from 'react';
 
+import { Anchor, createStyles, Text } from '@mantine/core';
+import Link from 'next/link';
+
+const layoutFooterStyles = createStyles(theme => ({
+  footer: {
+    display: 'flex',
+    height: '4rem',
+    alignItems: 'center',
+    backgroundColor: theme.colors.slate[9],
+  },
+  container: {
+    width: '100%',
+    maxWidth: theme.breakpoints.xl,
+    paddingInline: theme.spacing.md,
+    marginInline: 'auto',
+  },
+  link: {
+    color: theme.colors.slate[5],
+    '&:hover': {
+      color: theme.colors.slate[0],
+    },
+  },
+}));
+
 const LayoutFooter: FC = () => {
+  const { classes } = layoutFooterStyles();
+
   return (
-    <footer className="flex h-16 items-center bg-slate-900">
-      <div className="container mx-auto max-w-screen-lg px-4">
-        <p className="text-center text-sm text-slate-600">
+    <footer className={classes.footer}>
+      <div className={classes.container}>
+        <Text ta="center" fz="sm" color="slate.5">
           Created by{' '}
-          <a
+          <Link
             href="https://github.com/boonyarit-iamsaard"
             target="_blank"
-            className="hover:text-slate-400 hover:underline"
-            rel="noreferrer"
+            passHref
+            legacyBehavior
           >
-            Boonyarit Iamsaard
-          </a>
-        </p>
+            <Anchor className={classes.link} underline={false}>
+              Boonyarit Iamsaard
+            </Anchor>
+          </Link>
+        </Text>
       </div>
     </footer>
   );

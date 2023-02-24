@@ -1,18 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
 
-@layer base {
-  body {
-    @apply antialiased;
-  }
+body,
+#__next {
+  min-height: 100vh;
+}
 
-  body,
-  #__next {
-    @apply min-h-screen;
-  }
-
-  #__next {
-    @apply relative;
-  }
+#__next {
+  position: relative;
 }
