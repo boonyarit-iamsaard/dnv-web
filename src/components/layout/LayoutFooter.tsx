@@ -8,7 +8,7 @@ const layoutFooterStyles = createStyles(theme => ({
     display: 'flex',
     height: '4rem',
     alignItems: 'center',
-    backgroundColor: theme.colors.slate[9],
+    backgroundColor: theme.colors.dark[9],
   },
   container: {
     width: '100%',
@@ -19,7 +19,7 @@ const layoutFooterStyles = createStyles(theme => ({
   link: {
     color: theme.colors.slate[5],
     '&:hover': {
-      color: theme.colors.slate[0],
+      color: theme.colors.slate[2],
     },
   },
 }));

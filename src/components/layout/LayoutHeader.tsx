@@ -10,8 +10,7 @@ const layoutHeaderStyles = createStyles(theme => ({
     width: '100%',
     height: '4rem',
     alignItems: 'center',
-    backgroundColor: 'hsla(0, 0%, 100%, 0.95)',
-    borderBottom: `1px solid ${theme.colors.slate[2]}`,
+    // backgroundColor: 'hsla(0, 0%, 100%, 0.95)',
     '@supports (backdrop-filter: blur(8px))': {
       backdropFilter: 'blur(8px)',
     },
@@ -24,6 +23,11 @@ const layoutHeaderStyles = createStyles(theme => ({
     paddingInline: theme.spacing.md,
     marginInline: 'auto',
   },
+  logo: {
+    color: theme.colors.slate[2],
+    fontWeight: 700,
+    fontFamily: theme.headings.fontFamily,
+  },
 }));
 
 const LayoutHeader: FC = () => {
@@ -33,7 +37,7 @@ const LayoutHeader: FC = () => {
     <header className={classes.header}>
       <div className={classes.container}>
         <Link href="/" passHref legacyBehavior>
-          <Anchor color="slate.5" underline={false}>
+          <Anchor className={classes.logo} underline={false}>
             DNV
           </Anchor>
         </Link>

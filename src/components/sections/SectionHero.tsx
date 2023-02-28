@@ -14,6 +14,8 @@ const sectionHeroStyles = createStyles(theme => ({
     display: 'grid',
     placeItems: 'center',
     height: '100vh',
+    color: theme.colors.slate[5],
+    background: `linear-gradient(to bottom, ${theme.colors.dark[9]}, ${theme.colors.slate[9]})`,
   },
   container: {
     maxWidth: theme.breakpoints.sm,
@@ -54,15 +56,13 @@ const SectionHero: FC = () => {
       >
         {styles => (
           <Stack className={classes.container} style={styles}>
-            <Text color="slate.5" fs="italic">
-              Welcome to
-            </Text>
-            <Title color="slate.7" tt="uppercase">
+            <Text fs="italic">Welcome to</Text>
+            <Title color="slate.2" tt="uppercase">
               Dragonfly Naturist Village
             </Title>
-            <Divider color="slate.2" />
+            <Divider color="slate.5" />
             {/* TODO: Improve this text */}
-            <Text color="slate.5" fz="sm" fs="italic">
+            <Text fz="sm" fs="italic">
               &quot;We are a naturist community in the beautiful countryside of
               the Pattaya area of Thailand.&quot;
             </Text>
