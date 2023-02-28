@@ -1,11 +1,12 @@
 import { type NextPage } from 'next';
 
-import { SectionHero } from '@/components/sections';
+import { SectionHero, SectionIntroduction } from '@/components/sections';
 
 const Home: NextPage = () => {
   return (
     <>
       <SectionHero />
+      <SectionIntroduction />
     </>
   );
 };
