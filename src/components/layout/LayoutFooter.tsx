@@ -17,7 +17,7 @@ const layoutFooterStyles = createStyles(theme => ({
     marginInline: 'auto',
   },
   link: {
-    color: theme.colors.slate[5],
+    color: theme.colors.slate[4],
     '&:hover': {
       color: theme.colors.slate[2],
     },
@@ -31,7 +31,10 @@ const LayoutFooter: FC = () => {
     <footer className={classes.footer}>
       <div className={classes.container}>
         <Text ta="center" fz="sm" color="slate.5">
-          Created by{' '}
+          &#64; 2021 Dragonfly Naturist Village. All rights reserved.
+        </Text>
+        <Text ta="center" fz="sm" color="slate.5">
+          Made with ❤️ by{' '}
           <Link
             href="https://github.com/boonyarit-iamsaard"
             target="_blank"
@@ -39,7 +42,7 @@ const LayoutFooter: FC = () => {
             legacyBehavior
           >
             <Anchor className={classes.link} underline={false}>
-              Boonyarit Iamsaard
+              Boonyarit Iamsa-ard
             </Anchor>
           </Link>
         </Text>
