@@ -28,8 +28,8 @@ export const theme: MantineThemeOverride = {
       '#1c1917',
     ],
   },
-  fontFamily: 'Noto Sans, sans-serif',
+  fontFamily: 'Poppins, sans-serif',
   headings: {
-    fontFamily: 'Noto Serif, serif',
+    fontFamily: 'Playfair Display, serif',
   },
 };
