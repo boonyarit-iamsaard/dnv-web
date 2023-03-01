@@ -10,10 +10,11 @@ const layoutHeaderStyles = createStyles(theme => ({
     width: '100%',
     height: '4rem',
     alignItems: 'center',
-    // backgroundColor: 'hsla(0, 0%, 100%, 0.95)',
+    backgroundColor: `${theme.colors.dark[9]}f2`,
     '@supports (backdrop-filter: blur(8px))': {
       backdropFilter: 'blur(8px)',
     },
+    zIndex: 10,
   },
   container: {
     display: 'flex',
